@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using RobotLocator.DomainModels;
 using RobotLocator.Interfaces;
 using System.Net;
@@ -28,8 +29,16 @@ namespace RobotLocator.Controllers
         //TODO: See about using http client instead, but don't have time
         private static IEnumerable<Robot> GetRobotExternalData(string mainUrl, string altUrl)
         {
-            // Call the external website and populate the robot list
-            return new List<Robot>();
+            using (var webClient = new WebClient())
+            {
+                var jsonData = string.Empty;
+                try
+                {
+                    jsonData = webClient.DownloadString(mainUrl);
+                }
+                catch (Exception) { }
+                return !string.IsNullOrEmpty(jsonData) ? JsonConvert.DeserializeObject<List<Robot>>(jsonData) : new List<Robot>();
+            }
 
         }
     }
