@@ -3,10 +3,11 @@ Robot Locator -  Dwyer Take home
 
 ### Instructions to Run
 
-1. Run nuget Restore (to install Newtonsoft.Json package)
-2. Run the project
-3. Post JSON payload to https://localhost:7182/api/RobotDistance
-4. Verify results
+1. Open RobotLocator.sln
+2. Run nuget Restore (to install Newtonsoft.Json package)
+3. Run the project
+4. Post "Load" JSON payload to https://localhost:7182/api/RobotDistance
+5. Verify results
 
 ### Future features/functionality
 All features/functionality really 
