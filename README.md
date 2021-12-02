@@ -10,8 +10,9 @@ Robot Locator -  Dwyer Take home
 5. Verify results
 
 ### Future features/functionality
-All features/functionality really 
-1. Add a queueing system where a list of loads can be posted to the back-end and have multiple robots picking up loads simultaneously or potentially even allowing robots to drop a load and already have another one they are going to pick up
+All future features/functionality really requires knowning the requirements of the customer and future needs, but there are some that could prove useful.
+1. Add a queueing system where a list of loads can be posted to the back-end and have multiple robots picking up loads simultaneously or potentially even allow robots to drop a load and already have another one they are going to pick up that is close to their destination
 2. Add unit tests, particularly concentrating around the within distance and battery level requirement
-3. There may eventually need to be a "minimum" battery threshold required so that robots might not fail to deliver their load due to losing power
-4. Submitting updated locations for the robots back to the external API (if the external API allows it) when they are dropping their loads
+3. There may eventually need to be a "minimum" battery threshold required so that robots might not fail to deliver their load due to their losing power
+4. Robots at battery level zero should likely not be contacted or be sent to a charing station.
+5. Submitting updated locations for the robots back to the external API (if the external API allows it) where they end up after dropping off their load
